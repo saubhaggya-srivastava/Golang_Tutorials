@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"io"
-	"io/ioutil"
+	"io"	
 	"os"
 )
 
@@ -27,7 +26,8 @@ func main() {
 }
 
 func readddddfile(file string){
-	databyte,err := ioutil.ReadFile(file)
+	// databyte,err := ioutil.ReadFile(file)  ioutl is old use os package instead
+	databyte, err:= os.ReadFile(file)
 	if err!=nil{
 		panic(err)
 	}
